@@ -1,0 +1,14 @@
+version: '2'
+services:
+    scripto-app:
+        image: scripto
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://scripto-mysql:3306/scripto?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    scripto-mysql:
+        extends:
+            file: mysql.yml
+            service: scripto-mysql
