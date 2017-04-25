@@ -43,6 +43,18 @@ public class CacheConfiguration {
             cm.createCache(net.mehrad.scripto.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(net.mehrad.scripto.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
             cm.createCache(net.mehrad.scripto.domain.SocialUserConnection.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.Region.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.Country.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.Location.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.Department.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.Department.class.getName() + ".employees", jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.Task.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.Task.class.getName() + ".jobs", jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.Employee.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.Employee.class.getName() + ".jobs", jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.Job.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.Job.class.getName() + ".tasks", jcacheConfiguration);
+            cm.createCache(net.mehrad.scripto.domain.JobHistory.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
